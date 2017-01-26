@@ -1,6 +1,7 @@
 INCLUDE(GetPrerequisites)
+
 IF(WIN32)
-    include("include.windows.cmake")
+    include("${CMAKE_CURRENT_LIST_DIR}/include.windows.cmake")
 ELSE()
-    
+    include("${CMAKE_CURRENT_LIST_DIR}/include.unix.cmake")
 ENDIF()
