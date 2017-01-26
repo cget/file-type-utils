@@ -4,8 +4,8 @@ foreach(MSVC_VER "14.0" "9.0" "8")
     list(APPEND cmd_paths "C:/Program Files (x86)/Microsoft Visual Studio ${MSVC_VER}/VC/bin")
 endforeach()
 
-find_program(DUMPBIN "dumpbin" PATHS ${cmd_paths})
-find_program(LINK_CMD "link" PATHS ${cmd_paths})
+find_program(DUMPBIN "dumpbin" PATHS ${cmd_paths} NO_DEFAULT_PATH)
+find_program(LINK_CMD "link" PATHS ${cmd_paths} NO_DEFAULT_PATH)
 
 FUNCTION(CGET_GET_FILE_TYPE name var)
     get_filename_component(EXT "${name}" EXT)
