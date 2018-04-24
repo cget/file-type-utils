@@ -5,6 +5,8 @@ foreach(MSVC_VER "14.0" "12.0" "11.0" "10.0" "9.0" "8")
     list(APPEND cmd_paths "$ENV{VS${MSVC_VER_NO_PERIODS}COMNTOOLS}/../../VC/bin")
     list(APPEND cmd_paths "C:/Program Files/Microsoft Visual Studio ${MSVC_VER}/VC/bin")
     list(APPEND cmd_paths "C:/Program Files (x86)/Microsoft Visual Studio ${MSVC_VER}/VC/bin")
+	list(APPEND cmd_paths "D:/Program Files/Microsoft Visual Studio ${MSVC_VER}/VC/bin")
+    list(APPEND cmd_paths "D:/Program Files (x86)/Microsoft Visual Studio ${MSVC_VER}/VC/bin")
 endforeach()
 
 find_program(DUMPBIN "dumpbin" PATHS ${cmd_paths} NO_DEFAULT_PATH)
